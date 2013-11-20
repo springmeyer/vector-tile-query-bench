@@ -1,0 +1,7 @@
+{
+  "name"          : "vector-tile-query-bench",
+  "dependencies"  : {
+      "sphericalmercator": "*",
+      "mapnik":"https://github.com/mapnik/node-mapnik/tarball/master#0b93a8598627"
+  }
+}
