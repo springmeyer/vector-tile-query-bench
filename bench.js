@@ -14,8 +14,12 @@ fs.readFile(tile,function(err,raw){
     if (err) throw err;
     zlib.inflate(raw, function(err, data) {
         if (err) throw err;
+        console.time('setData');
         vt.setData(data);
+        console.timeEnd('setData');
+        console.time('parse');
         vt.parse(function(err){
+            console.timeEnd('parse');
             console.time('toJSON');
             var vdata = vt.toJSON();
             console.timeEnd('toJSON');
